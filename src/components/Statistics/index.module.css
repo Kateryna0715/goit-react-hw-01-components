@@ -32,7 +32,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc((100% - 20px) / 4);
 }
 .label {
   text-align: center;
