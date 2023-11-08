@@ -2,7 +2,7 @@
   padding: 12px;
   margin-bottom: 8px;
   display: flex;
-  justify-content: start;
+  justify-content: left;
   align-items: center;
   gap: 12px;
   background-color: rgb(154, 193, 209, 0.1);
