@@ -1,6 +1,6 @@
 import CSS from './index.module.css';
 
-const TransactionHistory = items => {
+const TransactionHistory = ({ items }) => {
   return (
     <table className={CSS.transactionHistory}>
       <thead>
@@ -11,18 +11,17 @@ const TransactionHistory = items => {
         </tr>
       </thead>
 
-      <tbody>{getTransaction(items)}</tbody>
+      <tbody>
+        {items.map(item => (
+          <tr key={item.id}>
+            <td>{item.type}</td>
+            <td>{item.amount}</td>
+            <td>{item.currency}</td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 };
-function getTransaction(data) {
-  return data.items.map(item => (
-    <tr key={item.id}>
-      <td>{item.type}</td>
-      <td>{item.amount}</td>
-      <td>{item.currency}</td>
-    </tr>
-  ));
-}
 
 export default TransactionHistory;
